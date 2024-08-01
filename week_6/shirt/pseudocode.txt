@@ -1,0 +1,18 @@
+NUMBER OF PROMPTS
+    sys.argv[1] ==> source jpg
+    sys.argv[2] ==> name of output jpg
+    shirt = img.open(shirt.jpg)
+
+CONDITIONS FOR PROMPT (sys.exit(Error))
+    len != 3
+    in or out name of the file != .jpg or .png or .jpeg (case-insensitive)
+    in and out don't have same extension
+
+try:
+    1. open img (Image.open)
+    2. resize and crop the input (ImageOps.fit) using default mtd
+    3. overlay the shirt (Image.paste)
+    4. save the img (Image.save)
+
+except FileNotFoundError:
+    sys.exit("File not found")
